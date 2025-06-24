@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>{% block title %}สวนหลังบ้าน{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './lib/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #213357;padding: 15px;">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="static/images/logo4.png" alt="" width="160px" height="80px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" style="margin-right: 25px;">
+                    <a class="nav-link" href="{% url 'about' %}">เกี่ยวกับฉัน</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="{% url 'region' %}" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาคของไทย</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'region' %}">ภาคของไทย</a>
+                        <a class="dropdown-item" href="{% url 'central' %}">ภาคกลาง</a>
+                        <a class="dropdown-item" href="{% url 'north' %}">ภาเหนือ</a>
+                        <a class="dropdown-item" href="{% url 'northeast' %}">ภาคอีสาน</a>
+                        <a class="dropdown-item" href="{% url 'south' %}">ภาคใต้</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="หมวดเที่ยว" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดเที่ยว</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'group' %}">หมวดเที่ยว</a>
+                        <a class="dropdown-item" href="{% url 'camping' %}">แคมป์ปิ้ง</a>
+                        <a class="dropdown-item" href="{% url 'nature' %}">ธรรมชาติ</a>
+                        <a class="dropdown-item" href="{% url 'sea' %}">ทะเล</a>
+                        <a class="dropdown-item" href="{% url 'photograph' %}">ถ่ายรูป</a>
+                    </div>
+                </li>
+                
+                 
+            </ul>
+           <a href="{% url 'contact' %} "><button class="btn btn-outline-light " type="submit" style="margin-right: 60px;">CONTACT</button></a>
+         </div>
+        </div>
+    </nav> <img src="static/images/c/c2/1.jpg" alt="" width="100%" height="110%">
+    <div class="container" style="font-size: 17.5px;">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <p>
+                    สวนหลังบ้าน ร้านกาแฟเล็กๆ ที่ตั้งขายหน้าบ้าน !
+                </p>
+                <br>
+                <p> สวนหลังบ้านอยู่ที่ถนนปากแพรก ท่ามกลาง บรรยากาศของบ้านเก่าสถาปัตยกรรมสไตล์ ชิโน-โปตุกีส ที่นอกจากจะมาดื่มด่ำความสดชื่นของเครื่งดื่มที่มีให้ เลือกหลากหลาย ท่านยังสามารถนั่งชิล ถ่ายรูปเก๋ๆกับ บ้านเก่าสุดคลาสสิคในย่านนี้พร้อมถือแก้วที่มีโลโก้ร้าน
+                    สวนหลังบ้าน นอกเข้ามาใช้บริการที่นี่แล้ว ยังได้ฟัง เรื่องราวประวัติศาสตร์ถนนปากแพรกและสงครามโลก ครั้งที่สองอีกด้วย ตามสโลแกน จิบกาแฟ แลตึก นึกเรื่องราว เล่าประวัติศาสตร์
+
+                </p>
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <img src="static/images/c/c2/2.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/c/c2/3.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col "></div>
+            <div class="col ">
+                <p>มีชา กาแฟ ราคาถูกๆ ให้ได้เลือกชิมกันหลากหมายเมนู</p>
+                <br>
+                <p> (บาริสต้าเคยเป็นไกด์นำเที่ยว) ส่วนเรื่องการ ฃบริการของทางร้าน บาริสต้า ตั้งใจทำด้วยความปรานีต ประนอมอาจช้าหน่อย เพราะคนทำมีคนเดียว โปรดรอ อย่างมีความหวัง ที่ร้านมีน้ำชาให้ดื่มฟรีระหว่างรอ ออร์เดอร์นะครับ
+
+                </p>
+
+            </div>
+            <div class="col "></div>
+        </div>
+    </div>
+
+
+    <div class="container text-center ">
+        <img src="static/images/c/c2/5.jpg " alt=" " width="75%" height="100%">
+    </div>
+    <div class="container text-center ">
+        <img src="static/images/c/c2/4.jpg " alt=" " width="75%" height="100%">
+    </div>
+    <div class="container " style="font-size: 17.5px; ">
+        <div class="row ">
+            <div class="col "></div>
+            <div class="col ">
+                <p> บาริสต้าใส่ใจในรายละเอียดทุกแก้วทุกเมนู </p>
+                <br>
+                <p> ที่ร้านมีบริการใช้เจลล้างมือ ตามแนวทางท่องเที่ยววิถีใหม่ ใส่ใจสุขภาพ ตามวิถี New Normal ด้วยนะครับ ทางร้านยินดีต้อนรับและ พร้อมให้บริการทุกๆท่านด้วยใจ
+
+                </p>
+            </div>
+            <div class="col "></div>
+        </div>
+    </div>
+    <div class="container text-center ">
+        <img src="static/images/c/c2/6.jpg " alt=" " width="75%" height="100%">
+    </div>
+    <div class="container " style="font-size: 17.5px; ">
+        <div class="row ">
+            <div class="col "></div>
+            <div class="col ">
+                <p> วัยรุ่นไม่ควรพลาด !!! </p>
+                <br>
+                <p>
+                    พิกัด : สวนหลังบ้าน ถ.ปากแพรก จ.กาญจนบุรี
+
+                </p>
+            </div>
+            <div class="col "></div>
+        </div>
+    </div>
+
+
+    <div class="container " style="margin-bottom: 50px; ">
+        <div class="col "></div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/c/c2/1.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/2.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/3.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/c/c2/4.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/5.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/7.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/c/c2/8.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/14.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/c/c2/15.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col "></div>
+    </div>
+    </div>
+    <div style="padding:30px;margin-right: 60px;text-align: center; ">
+        <h3>CREDIT</h2>
+            <br>
+            <a href="https://www.facebook.com/BlackPackTrip" class="font-weight-bold " style="color: rgb(0, 0, 0); "><img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK</a>
+            <br>
+            <br>
+            <p class="font-weight-bold ">Camera : Aoffer Rock Photographer</p>
+            <br>
+            <a href="https://www.facebook.com/BlackPackTrip"><img src="static/images/p/fb.png" alt="" width="50px" height="50px"></a>
+
+            <br>
+    </div>
+    <div style="text-align: center;">
+        <h2>แนะนำแหล่งท่องเที่ยว</h2>
+    </div>
+    <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+        <div class=" row ">
+            <div class="col ">
+                <a href="{% url 'ne2' %}"><img src="static/images/ne/ne2/2.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/เที่ยวแล้ว.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวแล้วเที่ยวอีก
+                <a href="{% url 'ne2' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">วัดถ้ำแสงธรรม ขอนแก่น</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{% url 'c1' %}"><img src="static/images/c/c1/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK
+                <a href="{% url 'c1' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">บ้านตาหรั่ง สุพรรณบุรี</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{% url 'c4' %}"><img src="static/images/c/c4/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK</a>
+                <a href="{% url 'c4' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">หาดเจ้าสำราญ </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<section style="text-align: center;">
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
+        <script>
+            function goForward() {
+                window.history.forward()
+            }
+        </script>
+
+    </section>
+        <div style="text-align: center;">
+        <input class="btn btn-outline-info" type="button" value="Back" onclick="goBack()">
+        <a href="{% url 'about' %}"> <button type="button" class="btn btn-outline-info">เกี่ยวกับฉัน</button></a>
+        <a href="{% url 'central' %}"> <button type="button" class="btn btn-outline-info">ภาคกลาง</button></a>
+        <a href="{% url 'north' %}"> <button type="button" class="btn btn-outline-info">ภาเหนือ</button></a>
+        <a href="{% url 'south' %}"> <button type="button" class="btn btn-outline-info">ภาคใต้</button></a>
+        <a href="{% url 'northeast' %}"><button type="button" class="btn btn-outline-info">ภาคอีสาน</button></a>
+        <a href="{% url 'camping' %}"> <button type="button" class="btn btn-outline-info">แคมป์ปิ้ง</button></a>
+        <a href="{% url 'nature' %}"> <button type="button" class="btn btn-outline-info">ธรรมชาติ</button></a>
+        <a href="{% url 'photograph' %}"> <button type="button" class="btn btn-outline-info">ถ่ายรูป</button></a>
+        <a href="{% url 'sea' %}"> <button type="button" class="btn btn-outline-info">ทะเล</button></a>
+        <input class="btn btn-outline-info" type="button" value="Forward" onclick="goForward()">
+    </div>
+  
+    <div class="jumbotron " style="margin-bottom:0;background-color: #213357; ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'about' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">เกี่ยวกับฉัน</a></p>
+                    <br>
+
+                    <p>
+                        <a href="{% url 'region' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">ภาคของไทย</a></p>
+                    <div style="padding-top:50px;text-align: left;color:#ffffff;">
+
+                        นักศึกษา ชั้นปีที่ 3
+                        <br> สาขาวิชาวิศวกรรมสารสนเทศ คณะวิศวกรรมศาสตร์
+                        <br> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </div>
+
+                </div>
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'group' %} " style="font-size: 18px;color: rgb(255, 255, 255); ">หมวดเที่ยว</a></p>
+                    <br>
+
+                    <p>
+                        <a href="{% url 'contact' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">Contact</a></p>
+             </div>
+                <div class="col ">
+                    <img src="static/images/logo4.png " alt=" " width="400px " height="200px ">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    {% block content %} {% endblock %}
+    <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
+    <script src="{% static './lib/popper/popper.min.js' %}"></script>
+    <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

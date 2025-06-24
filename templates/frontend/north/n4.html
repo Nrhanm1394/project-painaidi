@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>{% block title %}ปางอุ๋ง{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './lib/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #213357;padding: 15px;">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="static/images/logo4.png" alt="" width="160px" height="80px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" style="margin-right: 25px;">
+                    <a class="nav-link" href="{% url 'about' %}">เกี่ยวกับฉัน</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="{% url 'region' %}" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาคของไทย</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'region' %}">ภาคของไทย</a>
+                        <a class="dropdown-item" href="{% url 'central' %}">ภาคกลาง</a>
+                        <a class="dropdown-item" href="{% url 'north' %}">ภาเหนือ</a>
+                        <a class="dropdown-item" href="{% url 'northeast' %}">ภาคอีสาน</a>
+                        <a class="dropdown-item" href="{% url 'south' %}">ภาคใต้</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="หมวดเที่ยว" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดเที่ยว</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'group' %}">หมวดเที่ยว</a>
+                        <a class="dropdown-item" href="{% url 'camping' %}">แคมป์ปิ้ง</a>
+                        <a class="dropdown-item" href="{% url 'nature' %}">ธรรมชาติ</a>
+                        <a class="dropdown-item" href="{% url 'sea' %}">ทะเล</a>
+                        <a class="dropdown-item" href="{% url 'photograph' %}">ถ่ายรูป</a>
+                    </div>
+                </li>
+               
+            </ul>
+            <a href="{% url 'contact' %} "><button class="btn btn-outline-light " type="submit" style="margin-right: 60px;">CONTACT</button></a>
+        </div>
+        </div>
+    </nav>
+    <img src="static/images/n/n4/1.jpg" alt="" width="100%" height="110%">
+    <div class="container" style="font-size: 17.5px;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+                <br>
+                <p>หน้าหนาวมาถึงแล้ว !! แอดอยากชวนจะเพื่อนๆ ไปพักผ่อนร่างกาย ออกไปกอดธรรมชาติ...ฟินรับลมหนาว สูดอากาศบริสุทธิ์ให้เต็มปอด
+
+
+                </p>
+                <p>
+                    รุ่งอรุณ...กรุ่นไอหมอกบางๆ ลอยกระทบ เหนือน้ำ ท่ามกลางไพรสนสองใบ เป็นทัศนีย ภาพสวยงามที่เป็นเอกลักษณ์ของที่นี่เลยก็ว่าได้ จนได้รับสมญานามว่า "สวิตเซอร์แลนด์เมืองไทย" ด้วยบรรยากาศและความสวยงามทางธรรมชาติ ที่คล้ายกับประเทศสวิตเซอร์แลนด์นั่นเอง
+
+                </p>
+                <p>
+                    ไปนอนเต็นท์ในป่าสน กลางคืนถ่ายดาว ตื่นเช้าชมสายหมอกเหนือน้ำ กิจกรรมสุดชิลนั่นคือ "ล่องแพไม้ไผ่" และชมหงส์คู่พระราชทาน ทั้งหมดที่พูดมานี้ "ป า ง อุ๋ ง" มีครบเที่ยวในที่แห่งเดียว...
+
+                </p>
+                <p>
+                    ปางอุ๋งคืออีก 1 สถานที่ในลิสต์ของการเที่ยว จังหวัดแม่ฮ่องสอนแน่นอน ถือว่าเป็นอีกหนึ่งทริป แห่งความทรงจำที่ทำให้มีความสุข สามารถนำเรื่องราว ที่ได้พบเจอมาเล่าให้ทุกคนผ่านภาพภ่าย สำหรับ "ปางอุ๋ง" ถือเป็นอีกหนึ่งสถานที่ท่องเที่ยวสักครั้งหนึ่งในชีวิต ที่ไม่ควรพลาด
+                    !!! พร้อมแล้วตามชมภาพบรรยากาศสวยๆ ฟินๆ กันได้เลย...
+
+
+                </p>
+                <br>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <img src="static/images/n/n4/15.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/n/n4/1.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col "> <br>
+                <p> กลางคืนถ่ายดาว <br> สำหรับคนที่ชอบถ่ายดาว ตามล่าช้างเผือกที่นี่เหมาะเลยแหละครับ พื้นที่ห่างไกลจากตัวเมือง อยู่บนเขาที่สูง กลางคืนทำให้เราเห็นดาวได้ชัดเจน
+
+                </p>
+                <p>
+                    จุดไฮไลต์ เด่นๆของปางอุ๋งนั่นก็คือ นอนเต็นท์ในป่าสน นอนเต็นท์ท่ามกลางสวนสนและบรรยากาศหนาวๆ กลางคืนเงียบสงบ ตื่นเช้ามาเจอสายหมอกกระทบสายน้ำ ที่นี่เหมาะกับการพักผ่อนในวันหยุดที่ดีมากภายในปางอุ๋งจะมี ที่พักไว้คอยบริการนักท่องเที่ยวมีเต็นท์ให้เช่า หรือใครชอบ
+                    นอนแบบครอบครัวก็จะมีบ้านพักด้วยน่ะ
+
+                </p>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <img src="static/images/n/n4/5.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/n/n4/4.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col "> <br>
+                <p> ตื่นเช้าชมสายหมอกเหนือน้ำ
+                    <br> จะดีไหม ถ้าตื่นมาเปิดเต็นท์แล้วเจอสายหมอกลอย กระทบเหนือน้ำ กับบรรยากาศยามเช้าที่สดชื่น มันช่างฟินจริงๆ
+                </p>
+                <p>
+                    "ปางอุ๋ง" เป็นพื้นที่เป็นอ่างเก็บน้ำขนาดใหญ่บนยอดเขาสูง บริเวณริมอ่างเก็บน้ำเป็นทิวสนที่ปลูกเรียงรายกัน เป็นโครงการ ในพระราชดำริของพระบาทสมเด็จพระเจ้าอยู่หัวรัชกาลที่ 9 เพื่อพัฒนาคุณภาพชีวิตของชาวเขาบริเวณนี้ให้ดีขึ้น และทั้งยังช่วย ฟื้นฟูอนุรักษ์ทรัพยากรจากอดีตที่มีการทำไร่ทำสวน
+                    ปลูกพืช ยาเสพติดเป็นจำนวนมาก"ปางอุ๋ง" ที่หลายๆ คนอาจยัง ไม่เข้าใจความหมาย ในภาษาเหนือ คำว่า "ปาง" แปลว่า ที่พักกลางป่า ส่วนคำว่า "อุ๋ง" แปลว่า ที่ราบต่ำลึกลงไปที่มีลักษณะเหมือนแอ่ง กระทะที่มีน้ำขัง พอรวมกันเลยก็เลยแปลว่า "ที่พักกลางป่าที่มีแอ่งน้ำ
+                    ขนาดใหญ่นั่นเอง"ภาพอันสวยงามของไอหมอกที่ลอยเหนือน้ำ กับบรรยากาศอันหนาวในยามเช้า ทำให้ปางอุ๋งกลายเป็น สถานที่ท่องเที่ยวยอดฮิตสุดแสนโรแมนติกเลยหล่ะครับ
+
+
+                </p>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <img src="static/images/n/n4/6.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/n/n4/8.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col "> <br>
+                <p>ในช่วงเช้าๆ น้องหงส์มักจะมากินอาหารที่จุดลงแพไม้ไผ่ <br> เหมือนมาต้อนรับนักท่องเที่ยวที่มาที่นี่
+
+
+                </p>
+                <br>
+                <p>
+                    พิกัด : ปางอุ๋ง แม่ฮ่องสอน ประเทศไทย
+                    <br> รายละเอียด:
+                    <br> สนใจที่พักโทรสอบถามที่พัก : 082-191-1746 <br> หรือติดต่อที่ : อุทยานแห่งชาติถ้ำปลา–น้ำตกผาเสื่อ
+
+
+
+                </p>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+
+
+
+    <div class="container " style="margin-bottom: 50px; ">
+        <div class="col "></div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/n/n4/2.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/13.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/10.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/n/n4/14.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/1.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/9.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/n/n4/15.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/16.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/n/n4/5.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col "></div>
+    </div>
+    </div>
+    <div style="padding:30px;margin-right: 60px;text-align: center; ">
+        <h3>CREDIT</h2>
+            <br>
+            <a href="https://www.facebook.com/traveldd18 " class="font-weight-bold " style="color: rgb(0, 0, 0); "><img src="static/images/p/dd.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">เที่ยวดี๊ดี : traveldd</a>
+            <br>
+            <br>
+            <a href="instagram.com/traveldd18 "><img src="static/images/p/ig.png" alt="" width="60px" height="60px"></a>
+            <a href="https://www.facebook.com/traveldd18 "><img src="static/images/p/fb.png" alt="" width="50px" height="50px"></a>
+            <br>
+    </div>
+
+ <div style="text-align: center;">
+        <h2>แนะนำแหล่งท่องเที่ยว</h2>
+    </div>
+    <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+        <div class=" row ">
+            <div class="col ">
+                <a href="{% url 'c1' %}"><img src="static/images/c/c1/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/getout.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> GetOut ก้าวออกไป</a>
+                <a href="{% url 'c1' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">บ้านตาหรั่ง</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{%url 's1' %}"><img src="static/images/n/s1/5.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/chill.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> Chill Journey :: เที่ยวอย่างชิว</a>
+                <a href="{% url 's1' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">เชี่ยวหลาน สุราษฎร์ธานี</p>
+                </a>
+            </div>
+           <div class="col ">
+                <a href="{% url 'c3' %}"><img src="static/images/c/c3/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/goto.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวไปเลย go to trips</a>
+                <a href="{% url 'c3' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">โรงงานกระดาษ กาญจนบุรี</p>
+                </a>
+            </div>
+        </div>
+    </div>
+  <section style="text-align: center;">
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
+        <script>
+            function goForward() {
+                window.history.forward()
+            }
+        </script>
+
+    </section>
+        <div style="text-align: center;">
+        <input class="btn btn-outline-info" type="button" value="Back" onclick="goBack()">
+        <a href="{% url 'about' %}"> <button type="button" class="btn btn-outline-info">เกี่ยวกับฉัน</button></a>
+        <a href="{% url 'central' %}"> <button type="button" class="btn btn-outline-info">ภาคกลาง</button></a>
+        <a href="{% url 'north' %}"> <button type="button" class="btn btn-outline-info">ภาเหนือ</button></a>
+        <a href="{% url 'south' %}"> <button type="button" class="btn btn-outline-info">ภาคใต้</button></a>
+        <a href="{% url 'northeast' %}"><button type="button" class="btn btn-outline-info">ภาคอีสาน</button></a>
+        <a href="{% url 'camping' %}"> <button type="button" class="btn btn-outline-info">แคมป์ปิ้ง</button></a>
+        <a href="{% url 'nature' %}"> <button type="button" class="btn btn-outline-info">ธรรมชาติ</button></a>
+        <a href="{% url 'photograph' %}"> <button type="button" class="btn btn-outline-info">ถ่ายรูป</button></a>
+        <a href="{% url 'sea' %}"> <button type="button" class="btn btn-outline-info">ทะเล</button></a>
+        <input class="btn btn-outline-info" type="button" value="Forward" onclick="goForward()">
+    </div>
+    <div class="jumbotron " style="margin-bottom:0;background-color: #213357; ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'about' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">เกี่ยวกับฉัน</a></p>
+                    <br>
+
+                    <p>
+                        <a href="{% url 'region' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">ภาคของไทย</a></p>
+                    <div style="padding-top:50px;text-align: left;color:#ffffff;">
+
+                        นักศึกษา ชั้นปีที่ 3
+                        <br> สาขาวิชาวิศวกรรมสารสนเทศ คณะวิศวกรรมศาสตร์
+                        <br> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </div>
+
+                </div>
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'group' %} " style="font-size: 18px;color: rgb(255, 255, 255); ">หมวดเที่ยว</a></p>
+                    <br>
+
+                    <p>
+                <a href="{% url 'contact' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">Contact</a></p>
+               </div>
+                <div class="col ">
+                    <img src="static/images/logo4.png " alt=" " width="400px " height="200px ">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    {% block content %} {% endblock %}
+    <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
+    <script src="{% static './lib/popper/popper.min.js' %}"></script>
+    <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

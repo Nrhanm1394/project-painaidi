@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>{% block title %}PAINAIDI{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './lib/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+</head>
+
+<body>
+    <section>
+
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
+        <script>
+            function goForward() {
+                window.history.forward()
+            }
+        </script>
+
+
+        <script>
+            function myAbout() {
+                document.getElementById("qq").innerHTML = "<br>" + " ก่อนอื่น แอดมินก็ขอกล่าวสวัสดีและขอบคุณทุกคนที่ให้ความสนใจกับเว็บไซต์ของเรา เว็บไซต์เป็นเว็บไซต์แนะนำการท่องเที่ยวให้กับกลุ่มวัยรุ่นอายุคราวๆ รุ่นเดียวกับแอดมิน แต่สำหรับช่วงวัยอื่นๆที่สนใจก็สามารถเข้าชมเว็บไซต์ได้เช่นกัน ซึ่งแน่นอนเลยว่าเว็บไซต์ของเราก็จะมีสถานที่ท่องเที่ยวที่ใครหลายๆๆคนอาจจะเคยได้ไปหรือไปกันบ้างแล้ว แอดมินขอบอกเลยว่าแต่ละสถานที่มีความน่าสนใจ และน่าไปมาก สถานที่ท่องเที่ยวที่เราแนะนำมาให้ทุกคนดูนั้นเป็นของหลายๆเพจที่แอดมินได้ค้นหาและรวบรวมมา ทางแอดมินได้รวบรวมให้ทุกคนสามารถเข้ามาดูได้ ในเว็บไซต์ของเรา หรือสามารถเข้าไปดูได้โดยตรงเลยที่เพจของเจ้าของเพจ เพราะ ทุกสถานที่ ทางเราได้ตั้งเครดิตเจ้าของเพจและภาพไว้เรียบร้อยแล้ว ทั้งนี้แอดมินก็ขออนุญาต และติดเครดิตภาพจากเพจ เพื่อไม่ให้เป็นการเสียเวลา สำหรับคนที่พร้อมแล้วหรือยังไม่พร้อมก็ไปดูกันหน้าแรกของเพจกันเลย ";
+            }
+        </script>
+        <script>
+            function myFunction() {
+                var txt;
+                var person = prompt("โปรดใส่ชื่อของคุณ:");
+                if (person == null || person == "") {
+                    txt = "<br>" + "ยังไม่ได้กรอกข้อมูล";
+                } else {
+                    txt = "ยินดีต้อนรับคุณ" + " " + person + " " + "<br>" + "เข้าสู่ website ของเรา คุณจะได้พบสถานที่สวยๆ บรรยากาศดีๆ  ที่คุณอาจจะคาดไม่ถึง" + " " + "<br>" + "และหวังว่าสถานที่ที่เราจะเป็นตัวเลือกในการเดินทางท่องเที่ยวในครั้งถัดไปของคุณ ขอบคุณครับ/ค่ะ";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+
+    </section>
+
+    <div class="container-fluid" style="margin-block: 20px;">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #213357;padding: 15px;">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="static/images/logo4.png" alt="" width="160px" height="80px"></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item" style="margin-right: 25px;">
+                        <a class="nav-link" href="{% url 'about' %}">เกี่ยวกับฉัน</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="{% url 'region' %}" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาคของไทย</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="{% url 'region' %}">ภาคของไทย</a>
+                            <a class="dropdown-item" href="{% url 'central' %}">ภาคกลาง</a>
+                            <a class="dropdown-item" href="{% url 'north' %}">ภาเหนือ</a>
+                            <a class="dropdown-item" href="{% url 'northeast' %}">ภาคอีสาน</a>
+                            <a class="dropdown-item" href="{% url 'south' %}">ภาคใต้</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="หมวดเที่ยว" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดเที่ยว</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'group' %}">หมวดเที่ยว</a>
+                            <a class="dropdown-item" href="{% url 'camping' %}">แคมป์ปิ้ง</a>
+                            <a class="dropdown-item" href="{% url 'nature' %}">ธรรมชาติ</a>
+                            <a class="dropdown-item" href="{% url 'sea' %}">ทะเล</a>
+                            <a class="dropdown-item" href="{% url 'photograph' %}">ถ่ายรูป</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="{% url 'contact' %} "><button class="btn btn-outline-light " type="submit" style="margin-right: 60px;">CONTACT</button></a>
+            </div>
+        </nav>
+
+    </div>
+    <div class="container-fluid">
+
+        <div style="margin-top: 15px;">
+            <img src="static/images/6.jpg" alt="" width="100%" height=auto>
+        </div>
+        <div style="text-align: center;color:#213357 ;">
+            <button class="btn btn-outline-dark" onclick="myFunction()">ฉันมีอะไรจะบอกคุณ click me</button>
+            <p id="demo"></p>
+        </div>
+        <div style="text-align: center;margin:60px;">
+            <h2>ภาคของไทย</h2>
+        </div>
+        <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+            <div class=" row ">
+                <div class="col ">
+                    <a href="{% url 'central' %}"><img src="static/images/c/c1/2.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <a href="{% url 'central' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ภาคกลาง</p>
+                    </a>
+                </div>
+                <div class="col ">
+                    <a href="{% url 'north' %}"><img src="static/images/n/n4/7.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <a href="{% url 'north' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ภาคเหนือ</p>
+                    </a>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col ">
+                    <a href="{%url 'northeast' %}"><img src="static/images/ne/ne1/10.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <a href="{% url 'northeast' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ภาคอีสาน</p>
+                    </a>
+                </div>
+                <div class="col ">
+                    <a href="{% url 'south' %}"><img src="static/images/s/s1/5.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <a href="{% url 'south' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ภาคใต้</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;margin:60px;">
+            <h2>แนะนำแหล่งท่องเที่ยว</h2>
+        </div>
+        <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+            <div class=" row ">
+                <div class="col ">
+                    <a href="{% url 'n4' %}"><img src="static/images/n/n4/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/dd.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">เที่ยวดี๊ดี : traveldd</a>
+                    <a href="{% url 'n4' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ปางอุ๋ง แม่ฮ่องสอน</p>
+                    </a>
+                </div>
+                <div class="col ">
+                    <a href="{% url 'c4' %}"><img src="static/images/c/c4/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/goto.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวไปเลย go to trips</a>
+                    <a href="{% url 'c4' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">น้ำตกเอราวัญ</p>
+                    </a>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col ">
+                    <a href="{%url 'n4' %}"><img src="static/images/n/n4/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/chill.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">Chill Journey :: เที่ยวอย่างชิว</a>
+                    <a href="{% url 'n6' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">ดอยอ่างขาง เชียงใหม่</p>
+                    </a>
+                </div>
+                <div class="col ">
+                    <a href="{% url 'c2' %}"><img src="static/images/c/c2/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK
+
+                    <a href="{% url 'c2' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">สวนหลังบ้าน กาญจนบุรี</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class=" row ">
+                <div class="col ">
+                    <a href="{% url 'c1' %}"><img src="static/images/c/c1/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/getout.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> GetOut ก้าวออกไป</a>
+                    <a href="{% url 'c1' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">บ้านตาหรั่ง สุพรรณบุรี</p>
+                    </a>
+                </div>
+                <div class="col ">
+                    <a href="{% url 'c11' %}"><img src="static/images/c/c11/1.jpg" alt="" style="width:500px; height:340px;padding:10px;"></a>
+                    <img src="static/images/p/เที่ยวแล้ว.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวแล้วเที่ยวอีก</a>
+                    <a href="{% url 'c11' %}" class="nav-link">
+                        <p style="color: black;font-weight: bold;text-align: center;">นครนายก ตอนที่ 3</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;margin-top: 50px;">
+            <h2>เกี่ยวกับฉัน</h2>
+            <div class="container" style="background-color: #213357;margin: 50px;">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align:center;margin-left:0px;">
+                <button class="btn btn-outline-dark" onclick="myAbout()"> <h2>About Me</h2></button>
+
+            </div>
+            <div class="col">
+                <p id="qq"></p>
+            </div>
+            <div class="col" style="text-align:left;margin-right:100px;margin-bottom: 100px;">
+                <td>
+                    <img src="static/images/admin/ham.jpg" alt="" width="200px" height="auto">
+                    <img src="static/images/admin/rus1.jpg" alt="" width="200px">
+                </td>
+                <td>
+                    <img src="static/images/admin/fut.jpg" alt="" width="200px">
+                    <img src="static/images/admin/wil.jpg" alt="" width="200px">
+
+                </td>
+            </div>
+
+        </div>
+        <div style="text-align: center;">
+            <input class="btn btn-outline-info" type="button" value="Back" onclick="goBack()">
+            <a href="{% url 'about' %}"> <button type="button" class="btn btn-outline-info">เกี่ยวกับฉัน</button></a>
+            <a href="{% url 'central' %}"> <button type="button" class="btn btn-outline-info">ภาคกลาง</button></a>
+            <a href="{% url 'north' %}"> <button type="button" class="btn btn-outline-info">ภาเหนือ</button></a>
+            <a href="{% url 'south' %}"> <button type="button" class="btn btn-outline-info">ภาคใต้</button></a>
+            <a href="{% url 'northeast' %}"><button type="button" class="btn btn-outline-info">ภาคอีสาน</button></a>
+            <a href="{% url 'camping' %}"> <button type="button" class="btn btn-outline-info">แคมป์ปิ้ง</button></a>
+            <a href="{% url 'nature' %}"> <button type="button" class="btn btn-outline-info">ธรรมชาติ</button></a>
+            <a href="{% url 'photograph' %}"> <button type="button" class="btn btn-outline-info">ถ่ายรูป</button></a>
+            <a href="{% url 'sea' %}"> <button type="button" class="btn btn-outline-info">ทะเล</button></a>
+            <input class="btn btn-outline-info" type="button" value="Forward" onclick="goForward()">
+        </div>
+        <div class="jumbotron " style="margin-bottom:0;background-color: #213357; ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                        <p>
+                            <a href="{% url 'about' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">เกี่ยวกับฉัน</a></p>
+                        <br>
+
+                        <p>
+                            <a href="{% url 'region' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">ภาคของไทย</a></p>
+                        <div style="padding-top:50px;text-align: left;color:#ffffff;">
+
+                            นักศึกษา ชั้นปีที่ 3
+                            <br> สาขาวิชาวิศวกรรมสารสนเทศ คณะวิศวกรรมศาสตร์
+                            <br> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                        </div>
+
+                    </div>
+                    <div class="col ">
+                        <p>
+                            <a href="{% url 'group' %} " style="font-size: 18px;color: rgb(255, 255, 255); ">หมวดเที่ยว</a></p>
+                        <br>
+
+                        <p>
+                            <a href="{% url 'contact' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">Contact</a></p>
+                    </div>
+                    <div class="col ">
+                        <img src="static/images/logo4.png " alt=" " width="400px " height="200px ">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% block content %} {% endblock %}
+    <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
+    <script src="{% static './lib/popper/popper.min.js' %}"></script>
+    <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+
+</html>

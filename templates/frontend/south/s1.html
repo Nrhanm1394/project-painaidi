@@ -1,0 +1,370 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>{% block title %}เชี่ยวหลาน{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './lib/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #213357;padding: 15px;">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="static/images/logo4.png" alt="" width="160px" height="80px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" style="margin-right: 25px;">
+                    <a class="nav-link" href="{% url 'about' %}">เกี่ยวกับฉัน</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="{% url 'region' %}" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาคของไทย</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'region' %}">ภาคของไทย</a>
+                        <a class="dropdown-item" href="{% url 'central' %}">ภาคกลาง</a>
+                        <a class="dropdown-item" href="{% url 'north' %}">ภาเหนือ</a>
+                        <a class="dropdown-item" href="{% url 'northeast' %}">ภาคอีสาน</a>
+                        <a class="dropdown-item" href="{% url 'south' %}">ภาคใต้</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="หมวดเที่ยว" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดเที่ยว</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'group' %}">หมวดเที่ยว</a>
+                        <a class="dropdown-item" href="{% url 'camping' %}">แคมป์ปิ้ง</a>
+                        <a class="dropdown-item" href="{% url 'nature' %}">ธรรมชาติ</a>
+                        <a class="dropdown-item" href="{% url 'sea' %}">ทะเล</a>
+                        <a class="dropdown-item" href="{% url 'photograph' %}">ถ่ายรูป</a>
+                    </div>
+                </li>
+               
+            </ul>
+           <a href="{% url 'contact' %} "><button class="btn btn-outline-light " type="submit" style="margin-right: 60px;">CONTACT</button></a>
+        </div>
+        </div>
+    </nav>
+    <img src="static/images/s/s1/5.jpg" alt="" width="100%" height="110%">
+    <div class="container" style="font-size: 17.5px;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+                <br>
+                <p> สุราษฎร์ธานี
+                    <br> มา ล่องเรือสัมผัสกับธรรมชาติแบบสุดๆที่เขื่อนเชี่ยวหลาน (กุ้ยหลินเมืองไทย) ได้ ถ่ายรูปกับเขาสามเกลอ แลนด์มาร์คของเชี่ยวหลาน และ นอนแพให้ธรรมชาติโอบกอดที่ แพคีรีวาริน เชี่ยวหลาน รีสอร์ท พายคายัค เล่นน้ำ ล่องเรือส่องสัตว์ แวะถ่ายรูปน้ำตกบางหอย
+
+                </p>
+                <br>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <img src="static/images/s/s1/2.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/3.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+
+                <br>
+                <p> 5 เมนูแนะนำ พร้อมข้าวอันชัญสีสวยๆ และขนมหวาน อร่อยทุกอย่าง เรียกได้ว่าอิ่มท้องแข็งตั้งแต่ยังไม่เดินทาง
+                    <br>
+                    <br> ผัดไทยชัยยา
+                    <br> ยำผักกูด
+                    <br> ต้มไก่ขมิ้น
+                    <br> ผัดผักรวม
+                    <br> แกงส้มปลา
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/13.jpg" alt="" width="56%" height="100%">
+    </div>
+
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+                <p>
+                    หลังจากกินเสร็จก็ขึ้นรถของทางรีสอร์ทไปที่ท่าเรือ
+                </p>
+                <br>
+                <p> ขึ้นเรือหางยาว มีหลังคาไม่ต้องกลัวร้อนนะ นั่งเรือประมาณ 1.5 ชั่วโมง ระหว่างทางพาแวะชม กุ้ยหลินเมืองไทย ( เขาสามเกลอ ) มาเเล้วต้องนั่งหัวเรือถ่ายรูป เป็นไฮไลท์ของที่นี่เลย นั่งชมวิวสวยๆ ซีนนี้ต้องมีนะ ซ้อมท่าไปจากบ้านก่อนก็ได้จะได้ไม่เขิน
+                    เพราะต้องผลัดๆ กันไปถ่าย ทำเวลานิดนึงน้า
+
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/6.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/7.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+
+                <br>
+                <p> นั่งเรือชมวิวธรรมชาติแบบเพลินๆ ก็มาถึงที่ แพคีรีวาริน เชี่ยวหลาน รีสอร์ท ที่พักของเราในคืนนี้ หนึ่งในแพเบอร์ท็อป ของเขื่อนเชี่ยวหลาน ห้องพักสะดวกสบาย วิวข้างหน้าหันหาเขา ชุดใหญ่ที่รายเรียง อลังการงานธรรมชาติสร้างสุดๆ
+
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/8.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/9.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+                <p>
+                    ทางเดินเชื่อมต่อแต่ละแพจะอยู่หลังห้อง
+                </p>
+                <br>
+                <p> ห้องพักแต่ละหลังจะอยู่ได้ 8 คน โดยแบ่งเป็น 4 ล่าง 4 และความเด็ดของแพนี้คือมีห้องน้ำถึง 4 ห้องต่อหลัง!! ( ขับถ่าย 2 / อาบน้ำ 2 ) เพราะฉะนั้นไม่ต้องกลัวเลยครับว่าจะ ต้องแย่งกันใช้ห้องน้ำ !!
+
+
+                </p>
+                <p>
+                    ทางเดินใหญ่มากๆ เดินสวนกันได้สบาย พี่เค้าก็ขายของกับเราว่า แพอื่นทางเดินแคบมากนะ อันนี้เราใหญ่เลย เดินสะดวก ไม่ต้องกลัวตก 555 นั่งเรือมาชมน้ำตกบางหอย ความแปลกความพิเศษคือเป็นน้ำตกที่ไหลลงเขื่อน เลยครับ เจ๋งมาก เราสามารถถ่ายรูปบนเรือกับน้ำตกได้เลย
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/10.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/14.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+                <p>
+                    เเค่พายคายัคไปมุมซ้ายของที่พัก ก็ได้วิวนี้เลย เหมือนแคนาดาเลยเอาจริง สวยมากกกกกกก ไม่จกตา
+
+                </p>
+                <br>
+                <p>
+                    Morning safari กิจกรรมยามเช้าของที่พัก นั่งเรือไปชมพระอาทิตย์ขึ้นและดูวิถีชีวิตของสัตว์ยามเช้า เเล้วเเต่ดวง เลยว่าจะเจอสัตว์อะไรบ้าง บางคนโชคดีเจอกระทิงก็มี ส่วนชิวเจอ เเค่หมอกยามเช้าที่โอบล้อมขุนเขาสีเขียวสบายตา และสูดอากาศ ที่บริสุทธ์สดชื่น เเค่นี้ก็ดีต่อใจเเล้ว
+
+
+                </p>
+                <p>
+                    มาเที่ยวเชี่ยวหลานต้องตื่นเช้า เพราะนี่คือไฮไลท์เลย ตอนเช้าสวยมาก ดูพระอาทิตย์ขึ้นกับวิวอลังการ กับอากาศเย็นๆ ให้เราได้สัมผัส คือเหมือนอยู่เมืองนอกมาก
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/7.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+                <p>
+                    ออกกำลังกายยามเช้าด้วยการพายคายัคกับวิวปังๆกันหน่อย
+                </p>
+                <br>
+                <p> อัตราค่าบริการทัวร์รวม
+                    <br>
+                    <br> -พักแพคีรีวาริน 1 คืน + อาหาร 3 มื้อ (เที่ยง เย็น เช้า)
+                    <br> -ร้านอารีย์ดอย อาหารเที่ยง 1 มื้อ
+                    <br> -พักโรงแรมคริสตัล 1 คืน + อาหารเช้า (เช็คเอาท์ 14.00 น.หากต้องการเปิดห้อง 1 ห้อง ไว้เพื่ออาบน้ำหลังจากทำทัวร์เสร็จสามารถจ่ายค่าห้องเพิ่ม 300 บาท/ห้อง ได้ที่เคาน์เตอร์ (ไม่เกิน 4 โมงเย็น) ******
+                    <br> -ทัวร์ 4 เกาะ + อาหารเที่ยง 1 มื้อ
+                    <br> -เรือรับ-ส่ง(ตามโปรแกรมระบุ)
+                    <br> -เรือคายัค
+                    <br> -ค่าธรรมเนียมอุทยาน
+                    <br> พิกัด: เขื่อนเชี่ยวหลาน กุ้ยหลินเมืองไทย จ.สุราชธานี
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+        <div class="col "></div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/s/s1/5.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/13.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/12.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/s/s1/2.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/1.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/3.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/s/s1/6.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/9.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s1/10.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col "></div>
+    </div>
+    </div>
+    <div style="padding:30px;margin-right: 60px;text-align: center; ">
+        <h3>CREDIT</h2>
+            <br>
+            <a href="https://www.facebook.com/ChillJourney" class="font-weight-bold " style="color: rgb(0, 0, 0); "><img src="static/images/p/chill.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">Chill Journey :: เที่ยวอย่างชิว</a>
+            <br>
+            <br>
+            <a href="http://www.chilljourney.com/?fbclid=IwAR1gSVuqwwug8jWWs2bF4wLU3EhoE8-wqwNQCahbgiWQw1myoVgI4dXhzMw"><img src="static/images/p/web.png" alt="" width="40px" height="40px"></a>
+            <a href="https://www.facebook.com/ChillJourney"><img src="static/images/p/fb.png" alt="" width="50px" height="50px"></a>
+            <br>
+    </div>
+    <div style="text-align: center;">
+        <h2>แนะนำแหล่งท่องเที่ยว</h2>
+    </div>
+    <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+        <div class=" row ">
+            <div class="col ">
+                <a href="{% url 'c1' %}"><img src="static/images/c/c1/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+               <img src="static/images/p/getout.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> GetOut ก้าวออกไป</a>
+                  <a href="{% url 'c1' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">บ้านตาหรั่ง สุพรรณบุรี</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{%url 'ne2' %}"><img src="static/images/n/ne2/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/เที่ยวแล้ว.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวแล้วเที่ยวอีก</a>
+                <a href="{% url 'ne2' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">วัดถ้ำแสง ขอนแก่น</p>
+                </a>
+            </div>
+             <div class="col ">
+                <a href="{% url 'n4' %}"><img src="static/images/n/n4/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/dd.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">เที่ยวดี๊ดี : traveldd</a>
+                <a href="{% url 'n4' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">ปางอุ๋ง แม่ฮ่องสอน</p>
+                </a>
+            </div>
+        </div>
+    </div>
+ <section style="text-align: center;">
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
+        <script>
+            function goForward() {
+                window.history.forward()
+            }
+        </script>
+
+    </section>
+       <div style="text-align: center;">
+        <input class="btn btn-outline-info" type="button" value="Back" onclick="goBack()">
+        <a href="{% url 'about' %}"> <button type="button" class="btn btn-outline-info">เกี่ยวกับฉัน</button></a>
+        <a href="{% url 'central' %}"> <button type="button" class="btn btn-outline-info">ภาคกลาง</button></a>
+        <a href="{% url 'north' %}"> <button type="button" class="btn btn-outline-info">ภาเหนือ</button></a>
+        <a href="{% url 'south' %}"> <button type="button" class="btn btn-outline-info">ภาคใต้</button></a>
+        <a href="{% url 'northeast' %}"><button type="button" class="btn btn-outline-info">ภาคอีสาน</button></a>
+        <a href="{% url 'camping' %}"> <button type="button" class="btn btn-outline-info">แคมป์ปิ้ง</button></a>
+        <a href="{% url 'nature' %}"> <button type="button" class="btn btn-outline-info">ธรรมชาติ</button></a>
+        <a href="{% url 'photograph' %}"> <button type="button" class="btn btn-outline-info">ถ่ายรูป</button></a>
+        <a href="{% url 'sea' %}"> <button type="button" class="btn btn-outline-info">ทะเล</button></a>
+        <input class="btn btn-outline-info" type="button" value="Forward" onclick="goForward()">
+    </div>
+    <div class="jumbotron " style="margin-bottom:0;background-color: #213357; ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'about' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">เกี่ยวกับฉัน</a></p>
+                    <br>
+
+                    <p>
+                        <a href="{% url 'region' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">ภาคของไทย</a></p>
+                    <div style="padding-top:50px;text-align: left;color:#ffffff;">
+
+                        นักศึกษา ชั้นปีที่ 3
+                        <br> สาขาวิชาวิศวกรรมสารสนเทศ คณะวิศวกรรมศาสตร์
+                        <br> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </div>
+
+                </div>
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'group' %} " style="font-size: 18px;color: rgb(255, 255, 255); ">หมวดเที่ยว</a></p>
+                    <br>
+
+                    <p>
+           <a href="{% url 'contact' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">Contact</a></p>
+                        </div>
+                <div class="col ">
+                    <img src="static/images/logo4.png " alt=" " width="400px " height="200px ">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div> {% block content %} {% endblock %}
+    <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
+    <script src="{% static './lib/popper/popper.min.js' %}"></script>
+    <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

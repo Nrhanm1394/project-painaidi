@@ -1,0 +1,1 @@
+web: gunicorn painaidi1.wsgi

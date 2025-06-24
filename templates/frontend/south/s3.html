@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>{% block title %}หาดถ้ำพระนาง{% endblock %}</title>
+    <link rel="stylesheet" href="{% static './lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './lib/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #213357;padding: 15px;">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="static/images/logo4.png" alt="" width="160px" height="80px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" style="margin-right: 25px;">
+                    <a class="nav-link" href="{% url 'about' %}">เกี่ยวกับฉัน</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="{% url 'region' %}" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาคของไทย</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'region' %}">ภาคของไทย</a>
+                        <a class="dropdown-item" href="{% url 'central' %}">ภาคกลาง</a>
+                        <a class="dropdown-item" href="{% url 'north' %}">ภาเหนือ</a>
+                        <a class="dropdown-item" href="{% url 'northeast' %}">ภาคอีสาน</a>
+                        <a class="dropdown-item" href="{% url 'south' %}">ภาคใต้</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="หมวดเที่ยว" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดเที่ยว</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'group' %}">หมวดเที่ยว</a>
+                        <a class="dropdown-item" href="{% url 'camping' %}">แคมป์ปิ้ง</a>
+                        <a class="dropdown-item" href="{% url 'nature' %}">ธรรมชาติ</a>
+                        <a class="dropdown-item" href="{% url 'sea' %}">ทะเล</a>
+                        <a class="dropdown-item" href="{% url 'photograph' %}">ถ่ายรูป</a>
+                    </div>
+                </li>
+             
+            </ul>
+       <a href="{% url 'contact' %} "><button class="btn btn-outline-light " type="submit" style="margin-right: 60px;">CONTACT</button></a>
+           </div>
+        </div>
+    </nav>
+    <img src="static/images/s/s3/1.jpg" alt="" width="100%" height="110%">
+    <div class="container" style="font-size: 17.5px;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+                <br>
+                <p> ทัวร์กระบี่ 4 เกาะ
+                    <br>
+                    <br> ประเดิมที่แรกด้วย หาดถ้ำพระนาง ที่สวยงามติด 1 ใน10 ของโลก
+                    <br> ต่อด้วย เดินทะเลแหวก Unseen Thailand ที่ทุกคนต้องมา
+                    <br> ต่อด้วยดำน้ำดูปะการัง เกาะไก่
+                    <br> และสุดท้าย นอนชิลล์กับบรรยากาศของทิวสนและน้ำทะเลที่เกาะปอดะ
+
+                </p>
+                <br>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <img src="static/images/s/s3/2.jpg" alt="" width="75%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s3/3.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+
+                <br>
+                <p> มาเริ่มที่เเรกกันที่หาดถ้ำพระนาง ชายหาดที่สวยงามติดอันดับ 1 ใน10 ของโลกเลยนะ มุมที่เป็นเอกลักษณ์ต้องเดินลึกจนสุดชายหาด ที่เป็นที่ตั้งของถ้ำพระนาง ถ้ำศักดิ์สิทธิ์เป็นที่นับถือของชาวเรือ กราบสักการะ เพื่อความเป็นสิริมงคล มีมุมเก๋ๆให้ถ่ายรูป
+                    คือมุมที่มีหินย้อยลงมาเป็นฉากระ ย้ากับท้องทะเลสวยงาม
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s3/4.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s3/5.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+                <p>
+                    ทะเลแหวก
+                </p>
+                <br>
+                <p> ความมหัศจรรย์ของธรรมชาติที่เชื่อมเกาะสามเกาะระหว่างเกาะไก่ เกาะทับ และเกาะหม้อ ให้เราได้เดินเล่นถ่ายรูปกันเหมือนได้เดินอยู่กลางท้องทะเล ให้ดีมาตอนช่วงช่วงน้ำลงต่ำสุดในแต่ละวันจะได้เดินบนหาดทรายขาวเนียนแบบ เดินรันเวย์กันเลย น้ำก็ใสมากแบบมาก
+
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <img src="static/images/s/s1/7.jpg" alt="" width="56%" height="100%">
+    </div>
+    <div class="container" style="font-size: 17.5px;">
+        <div class=" row ">
+            <div class="col-3 "></div>
+            <div class="col ">
+
+                <br>
+                <p> ปิดท้ายด้วยเกาะปอดะ ด้านหน้าเกาะมีหาดทรายที่นุ่มและขาว ละเอียดกับบรรยากาศของทิวสนน้ำทะเลใสมากแบบมากอีกเเล้ว เล่นน้ำกัน ได้เพลินๆ และทานข้าวกันบนเกาะ กินอิ่มพักผ่อนนอนเล่นชิลๆ ได้เลยก่อนกลับฝั่ง
+                </p>
+                <p>
+                    เป็นโปรแกรมทัวร์ที่คุ้มค่าคุ้มเงิน ผนวกความสะดวกสบาย และ ไฮไลท์ทั้งสองสถานที่ระดับท็อปของโลกสถานที่ท่องเที่ยวระดับโลกของประเทศ ไทยในทริปเดียว !
+
+                </p>
+                <p>
+                    พิกัด : จ.กระบี่
+
+                    <br> -หาดถ้ำพระนาง
+                    <br> -เดินทะเลแหวก
+                    <br> -ดำน้ำดูปะการัง เกาะไก่
+                    <br> -เกาะปอดะ
+
+                </p>
+                <br>
+            </div>
+            <div class="col-3 "></div>
+        </div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+        <div class="col "></div>
+    </div>
+    <div class="container " style="margin-bottom: 50px; ">
+
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/s/s3/4.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s3/6.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s3/7.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+        <div class="col text-center ">
+            <tr>
+                <img src="static/images/s/s3/2.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s3/1.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+            <tr>
+                <img src="static/images/s/s3/3.jpg " alt=" " width="350px " height="240px ">
+            </tr>
+        </div>
+
+        <div class="col "></div>
+    </div>
+    </div>
+    <div style="padding:30px;margin-right: 60px;text-align: center; ">
+        <h3>CREDIT</h2>
+            <br>
+            <a href="https://www.facebook.com/ChillJourney" class="font-weight-bold " style="color: rgb(0, 0, 0); "><img src="static/images/p/chill.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px ">Chill Journey :: เที่ยวอย่างชิว</a>
+            <br>
+            <br>
+            <a href="http://www.chilljourney.com/?fbclid=IwAR1gSVuqwwug8jWWs2bF4wLU3EhoE8-wqwNQCahbgiWQw1myoVgI4dXhzMw"><img src="static/images/p/web.png" alt="" width="40px" height="40px"></a>
+            <a href="https://www.facebook.com/ChillJourney"><img src="static/images/p/fb.png" alt="" width="50px" height="50px"></a>
+            <br>
+    </div>
+ <div style="text-align: center;">
+        <h2>แนะนำแหล่งท่องเที่ยว</h2>
+    </div>
+    <div class="container" style="font-size: 17.5px;margin-bottom: 50px;">
+        <div class=" row ">
+            <div class="col ">
+                <a href="{% url 'ne2' %}"><img src="static/images/ne/ne2/2.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/เที่ยวแล้ว.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> เที่ยวแล้วเที่ยวอีก
+                <a href="{% url 'ne2' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">วัดถ้ำแสงธรรม ขอนแก่น</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{% url 'c1' %}"><img src="static/images/c/c1/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK
+                <a href="{% url 'c1' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">บ้านตาหรั่ง สุพรรณบุรี</p>
+                </a>
+            </div>
+            <div class="col ">
+                <a href="{% url 'c2' %}"><img src="static/images/c/c2/1.jpg" alt="" style="width:350px; height:240px;padding:10px;"></a>
+                <img src="static/images/p/black.jpg " alt=" " class="rounded-circle font-weight-bold " width="50px " height="50px "> BLACK PACK</a>
+                <a href="{% url 'c2' %}" class="nav-link">
+                    <p style="color: black;font-weight: bold;text-align: center;">สวนหลังบ้าน </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section style="text-align: center;">
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
+        <script>
+            function goForward() {
+                window.history.forward()
+            }
+        </script>
+
+    </section>
+     <div style="text-align: center;">
+        <input class="btn btn-outline-info" type="button" value="Back" onclick="goBack()">
+        <a href="{% url 'about' %}"> <button type="button" class="btn btn-outline-info">เกี่ยวกับฉัน</button></a>
+        <a href="{% url 'central' %}"> <button type="button" class="btn btn-outline-info">ภาคกลาง</button></a>
+        <a href="{% url 'north' %}"> <button type="button" class="btn btn-outline-info">ภาเหนือ</button></a>
+        <a href="{% url 'south' %}"> <button type="button" class="btn btn-outline-info">ภาคใต้</button></a>
+        <a href="{% url 'northeast' %}"><button type="button" class="btn btn-outline-info">ภาคอีสาน</button></a>
+        <a href="{% url 'camping' %}"> <button type="button" class="btn btn-outline-info">แคมป์ปิ้ง</button></a>
+        <a href="{% url 'nature' %}"> <button type="button" class="btn btn-outline-info">ธรรมชาติ</button></a>
+        <a href="{% url 'photograph' %}"> <button type="button" class="btn btn-outline-info">ถ่ายรูป</button></a>
+        <a href="{% url 'sea' %}"> <button type="button" class="btn btn-outline-info">ทะเล</button></a>
+        <input class="btn btn-outline-info" type="button" value="Forward" onclick="goForward()">
+    </div>
+    
+     
+    <div class="jumbotron " style="margin-bottom:0;background-color: #213357; ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'about' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">เกี่ยวกับฉัน</a></p>
+                    <br>
+
+                    <p>
+                        <a href="{% url 'region' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">ภาคของไทย</a></p>
+                    <div style="padding-top:50px;text-align: left;color:#ffffff;">
+
+                        นักศึกษา ชั้นปีที่ 3
+                        <br> สาขาวิชาวิศวกรรมสารสนเทศ คณะวิศวกรรมศาสตร์
+                        <br> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </div>
+
+                </div>
+                <div class="col ">
+                    <p>
+                        <a href="{% url 'group' %} " style="font-size: 18px;color: rgb(255, 255, 255); ">หมวดเที่ยว</a></p>
+                    <br>
+
+                    <p>
+          <a href="{% url 'contact' %}" style="font-size: 18px;color: rgb(255, 255, 255); ">Contact</a></p>
+                       </div>
+                <div class="col ">
+                    <img src="static/images/logo4.png " alt=" " width="400px " height="200px ">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+v>
+
+        {% block content %} {% endblock %}
+        <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
+        <script src="{% static './lib/popper/popper.min.js' %}"></script>
+        <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
